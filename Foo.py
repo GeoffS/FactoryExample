@@ -1,6 +1,10 @@
-class Foo:
-    def __init__(self, param):
-        self._param = param
+from abc import ABC, abstractclassmethod, abstractmethod
+from typing import Callable
 
-    def param(self): 
-        return self._param
+class Foo(ABC):
+    @abstractmethod
+    def param(self) -> str: 
+        pass
+
+
+FooFactory = Callable[[str], Foo]
