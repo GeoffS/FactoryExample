@@ -2,7 +2,12 @@
 # A stupid-simple client that just instantiates a Foo and returns
 # a formatted version of the foo.param() call.
 
-from Foo import FooFactory
+from typing import Callable
+from Foo import Foo
+
+
+# foo_client advertises the type of it's parameter:
+FooFactory = Callable[[str], Foo]
 
 
 def foo_client(foo_factory: FooFactory) -> str:

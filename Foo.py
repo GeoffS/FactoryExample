@@ -5,6 +5,3 @@ class Foo(ABC):
     @abstractmethod
     def param(self) -> str: 
         pass
-
-
-FooFactory = Callable[[str], Foo]
