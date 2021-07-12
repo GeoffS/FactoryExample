@@ -13,3 +13,7 @@ def second_foo_factory(foo_param: str) -> Foo:
 
 def foo2_factory(foo_param: str) -> Foo:
     return FooImpl2(foo_param)
+
+
+def foo3_factory() -> Foo:
+    return FooImpl2("foo3_factory")
