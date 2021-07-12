@@ -1,7 +1,7 @@
-from abc import ABC, abstractclassmethod, abstractmethod
-from typing import Callable
+from abc import ABC, abstractmethod
+
 
 class Foo(ABC):
     @abstractmethod
-    def param(self) -> str: 
+    def param(self) -> str:
         pass

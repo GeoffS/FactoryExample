@@ -1,6 +1,5 @@
-from foo_factories import simple_foo_factory
 from foo_client import foo_client
-
+from foo_factories import simple_foo_factory
 
 if __name__ == "__main__":
     print("App1:")

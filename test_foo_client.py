@@ -1,13 +1,15 @@
 from foo_client import foo_client
 
+
 # Factory method for test_foo_client1()
 def foo_factory1(foo_param):
     assert foo_param == 'foo_client Parameter Value'
-    
+
     class SimpleStandInFoo:
         def param(self): return "Testing for App1"
 
     return SimpleStandInFoo()
+
 
 # Pretty simple test that just checks some values.
 def test_foo_client1():
@@ -23,8 +25,8 @@ def test_foo_client2():
     class Test2MockFoo:
         def __init__(self):
             self.param_called_count = 0
-            
-        def param(self): 
+
+        def param(self):
             self.param_called_count += 1
             return "Testing for the 2nd time..."
 
